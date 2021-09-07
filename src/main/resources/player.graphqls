@@ -1,0 +1,21 @@
+type Player {
+id:ID!,
+name:String,
+surname:String,
+position:String
+}
+
+input PlayerDto {
+name:String!,
+surname:String!,
+position:String!
+}
+type Mutation {
+    addPlayer(player:PlayerDto):Player
+    deletePlayer(id:ID):Boolean
+}
+
+type Query{
+getPlayers:[Player]
+}
+
